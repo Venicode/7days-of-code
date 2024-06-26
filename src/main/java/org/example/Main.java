@@ -17,7 +17,7 @@ public class Main {
         //Buscando os IDS dos filmes mais populares
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://imdb8.p.rapidapi.com/title/v2/get-popular-movies-by-genre?genre=adventure&limit=10"))
-                .header("x-rapidapi-key", "ba28d4e6e5msh0ddc995e729898bp11066cjsn52beff912427")
+                .header("x-rapidapi-key", "key")
                 .header("x-rapidapi-host", "imdb8.p.rapidapi.com")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
@@ -40,7 +40,7 @@ public class Main {
         for (String title: titles) {
             HttpRequest requestFilm = HttpRequest.newBuilder()
                     .uri(URI.create("https://imdb8.p.rapidapi.com/title/v2/get-details?tconst="+title+"&country=US&language=en-US"))
-                    .header("x-rapidapi-key", "0bdba97149msh0b74d48ba8a71d4p1107bejsne189cdf81eaf")
+                    .header("x-rapidapi-key", "key")
                     .header("x-rapidapi-host", "imdb8.p.rapidapi.com")
                     .method("GET", HttpRequest.BodyPublishers.noBody())
                     .build();
